@@ -1,4 +1,8 @@
-function coordNavio(size) {
+import './App.js';
+
+
+export function coordNavio(size) {
+
     var coord = [];
     var tam = [];
     var orien = [];
@@ -32,7 +36,7 @@ function coordNavio(size) {
         coord[i] = aux;
         k = 0;
     }
-
+    
     for (i = 0; i < 10; i++) {
         aux = Math.floor(Math.random() * 4) + 1;
         tam[i] = aux;
@@ -43,7 +47,6 @@ function coordNavio(size) {
         aux = Math.floor(Math.random() * 100);
         orien[i] = aux % 2;
     }
-
 
 
 

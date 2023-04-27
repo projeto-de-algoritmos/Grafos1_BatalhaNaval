@@ -1,8 +1,7 @@
 import './App.css';
 import './ArrumaNavio';
-import {coord} from './ArrumaNavio';
-import {tam} from './ArrumaNavio';
-import {orien} from './ArrumaNavio';
+import { coordNavio } from './ArrumaNavio';
+import { coord } from './ArrumaNavio'
 
 function App() {
     const size = 10;
@@ -13,7 +12,9 @@ function App() {
     for (var i = 0; i < campo.length; i++) {
         campo[i] = new Array(10).fill(0);
     }
-    
+
+    coordNavio(size);
+
     for (i = 0; i < 10; i++) {
 
         coordl = Math.floor(coord[i] / 10);
