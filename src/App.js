@@ -6,11 +6,7 @@ function App() {
     const size = 10;
     const tam = new Array(7);
     var campo = new Array(size);
-    var coordl, coordc;
-    var coord = [0];
-    var orien = [0];
-    var aux;
-    var k, i, j;
+    var i = 0;
 
     tam[0] = 1;
     tam[1] = 1;
@@ -24,9 +20,11 @@ function App() {
         campo[i] = new Array(10).fill(0);
     }
 
+    console.log(campo);
+
     geraBarco();
 
-    // posicionaBarco();
+    //posicionaBarco();
 
     return campo.map(linha => {
         return (
@@ -40,11 +38,6 @@ function App() {
 
     })
 
-    // return (
-    // <>
-    // {campo.map(line=>line + "|")}
-    // </>
-    // );
 }
 
 export default App;
