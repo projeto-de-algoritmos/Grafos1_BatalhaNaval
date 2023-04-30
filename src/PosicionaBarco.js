@@ -2,14 +2,17 @@ import App from "./App";
 import geraBarco from "./GeraBarco";
 
 function posicionaBarco() {
-    var coordl, coordc;
-    var i = 0, j = 0;// k = 0;
+    var coordl = 0, coordc = 0;
+    var i, j = 0;// k = 0;
+    var l;
+
+    var {temp1, temp2} = geraBarco();
 
     //Posiciona os navios
     for (i = 0; i < 10; i++) {
-        coordl = Math.floor(geraBarco.coord[i] / 10);
-        coordc = geraBarco.coord[i] % 10;
-
+        
+        coordl = Math.floor(temp1[i] / 10);
+        coordc = temp1[i] % 10;
 
         for (j = 0; j <= App.tam[i]; j++) {
 
