@@ -1,24 +1,25 @@
-import App from './App.js'
 
 function geraBarco() {
+    var coord = [0];
+    var orien = [0];
+    var aux = 0;
+    var k = 0, i = 0, j = 0;
 
     //gera número aleatório
-    for (App.i = 0; App.i < 10; App.i++) {
+    for (i = 0; i < 10; i++) {
 
-        while (App.k !== 10) {
+        while (k !== 10) {
 
-            App.aux = Math.floor(Math.random() * 100);
+            aux = Math.floor(Math.random() * 100);
 
-            App.k = 0;
+            for (j = 0; j <= i; j++) {
 
-            for (App.j = 0; App.j <= App.i; App.j++) {
-
-                if (App.aux === App.coord[App.j]) {
-                    App.k = 1;
+                if (aux === coord[j]) {
+                    k = 1;
                 }
 
-                else if (App.aux !== App.coord[App.j] && App.k === 0) {
-                    App.k = 10;
+                else if (aux !== coord[j] && k === 0) {
+                    k = 10;
 
                 }
 
@@ -26,14 +27,14 @@ function geraBarco() {
 
         }
 
-        App.coord[App.i] = App.aux;
-        App.k = 0;
+        coord[i] = aux;
+        k = 0;
     }
 
     //Se 0 então vertical se 1 então horiontal
-    for (App.i = 0; App.i < 10; App.i++) {
-        App.aux = Math.floor(Math.random() * 100);
-        App.orien[App.i] = App.aux % 2;
+    for (i = 0; i < 10; i++) {
+        aux = Math.floor(Math.random() * 100);
+        orien[i] = aux % 2;
     }
 
 }

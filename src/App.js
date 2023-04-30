@@ -76,8 +76,14 @@ function App() {
 
     // }
 
+<<<<<<< HEAD
+=======
+    console.log(campo);
 
-    // posicionaBarco();
+    geraBarco();
+>>>>>>> 79c11c35 (Concertei alguns erros)
+
+    //posicionaBarco();
 
 //     return campo.map(linha => {
 //         return (
