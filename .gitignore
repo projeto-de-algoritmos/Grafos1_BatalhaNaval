@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85fb291d (Add gitignore)
 
  
 
@@ -25,6 +28,9 @@ package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 =======
 /node_modules
 >>>>>>> c6ec04bd (Updates das funcoes)
+=======
+>>>>>>> 85fb291d (Add gitignore)
