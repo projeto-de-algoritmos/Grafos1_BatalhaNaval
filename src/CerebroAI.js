@@ -92,6 +92,26 @@ function cerebroAI() {
     //Fim da verificação
     //=================================================================================================================================================================================================
 
+    //Atira no vizinho de cima
+    if (verifica_cima === 1 && acerta_cima === 1 && conta_acertos < 3) {
+        
+        casa -= 10;
+
+        coordl = Math.floor(casa / 10);
+        coordc = casa % 10;
+
+        if (campo[coordl][coordc] === 1) {
+
+            conta_acertos++;
+            campo[coordl][coordc]++;
+
+        }
+        else{
+            acerta_cima = 0;
+            casa += 10;
+        }
+
+    }
 
 
 
