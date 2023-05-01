@@ -1,9 +1,10 @@
-
+//
 import criaTabuleiro from './CriaTabuleiro';
 
 function cerebroAI() {
     var casa;
     var coordc = 0, coordl = 0;
+    // var campo = campoRecebido; colocar o campoRecebido na função
     var campo = criaTabuleiro();
     var verifica_cima = 0, verifica_baixo = 0, verifica_direita = 0, verifica_esquerda = 0;
     var acertou = 0;
@@ -90,145 +91,7 @@ function cerebroAI() {
     //=================================================================================================================================================================================================
     //Fim da verificação
     //=================================================================================================================================================================================================
-    while (conta_acertos < 3 && conta_acertos > 0) {
 
-        //Lógica de escolher os vizinhos de cima pra acertar
-        if (verifica_cima === 1 && acerta_cima === 1) {
-
-            casa = casa - 10;
-
-            coordl = Math.floor(casa / 10);
-            coordc = casa % 10;
-
-            //Verifica se o vizinho foi atacado antes
-            if (campo[coordl][coordc] !== 2 && campo[coordl][coordc] !== -1) {
-
-                //Acertou a água
-                if (campo[coordl][coordc] === 0) {
-
-                    campo[coordl][coordc]--;
-                    casa -= 10 * conta_acertos;
-                    acerta_cima = 0;
-                    
-
-                }
-
-                //Acertou o navio
-                else {
-
-                    campo[coordl][coordc]++;
-                    conta_acertos++;
-                    acerta_cima = 1;
-
-                }
-
-            }
-
-        }
-
-        //Lógica de escolher os vizinhos de baixo pra acertar
-        if (verifica_baixo === 1 && acerta_baixo === 1) {
-
-            casa = casa + 10;
-
-            coordl = Math.floor(casa / 10);
-            coordc = casa % 10;
-
-            //Verifica se o vizinho foi atacado antes
-            if (campo[coordl][coordc] !== 2 && campo[coordl][coordc] !== +1) {
-
-                //Acertou a água
-                if (campo[coordl][coordc] === 0) {
-
-                    campo[coordl][coordc]++;
-                    casa += 10*conta_acertos;
-                    acerta_baixo = 0;
-                    
-
-                }
-
-                //Acertou o navio
-                else {
-
-                    campo[coordl][coordc]++;
-                    conta_acertos++;
-                    acerta_baixo = 1;
-
-                }
-
-            }
-
-        }
-
-        //Lógica de escolher os vizinhos de direita pra acertar
-        if (verifica_direita === 1 && acerta_direita === 1) {
-
-            casa = casa + 1;
-
-            coordl = Math.floor(casa / 10);
-            coordc = casa % 10;
-
-            //Verifica se o vizinho foi atacado antes
-            if (campo[coordl][coordc] !== 2 && campo[coordl][coordc] !== +1) {
-
-                //Acertou a água
-                if (campo[coordl][coordc] === 0) {
-
-                    campo[coordl][coordc]++;
-                    casa += 1*conta_acertos;
-                    acerta_direita = 0;
-                    
-
-                }
-
-                //Acertou o navio
-                else {
-
-                    campo[coordl][coordc]++;
-                    conta_acertos++;
-                    acerta_direita = 1;
-
-                }
-
-            }
-
-        }
-
-        //Lógica de escolher os vizinhos de esquerda pra acertar
-        if (verifica_esquerda === 1 && acerta_esquerda === 1) {
-
-            casa = casa - 1;
-
-            coordl = Math.floor(casa / 10);
-            coordc = casa % 10;
-
-            //Verifica se o vizinho foi atacado antes
-            if (campo[coordl][coordc] !== 2 && campo[coordl][coordc] !== -1) {
-
-                //Acertou a água
-                if (campo[coordl][coordc] === 0) {
-
-                    campo[coordl][coordc]--;
-                    casa -= 1*conta_acertos;
-                    acerta_esquerda = 0;
-                    
-
-                }
-
-                //Acertou o navio
-                else {
-
-                    campo[coordl][coordc]--;
-                    conta_acertos--;
-                    acerta_esquerda = 1;
-
-                }
-
-            }
-
-        }
-
-    }
 
 
 
