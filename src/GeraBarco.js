@@ -1,46 +1,47 @@
 
-function geraBarco() {
-    var coord = new Array(10);
-    var orien = new Array(10);
-    var aux = 0;
-    var k = 0, i = 0, j = 0;
+// function geraBarco() {
+//     var coord = new Array(10);
+//     var orien = new Array(10);
+//     var aux = 0;
+//     var k = 0, i = 0, j = 0;
 
-    coord[0] = 101;
-    aux = 0;
-    //gera número aleatório
-    for (i = 0; i < 10; i++) {
+//     coord[0] = 101;
+//     aux = -1;
 
-        while (k !== 10) {
+//     //gera número aleatório
+//     for (i = 0; i < 10; i++) {
 
-            aux = Math.floor(Math.random() * 100);
-            k = 0;
-            for (j = 0; j <= i; j++) {
+//         while (k !== 10) {
 
-                if (aux === coord[j]) {
-                    k = 1;
-                }
+//             aux = Math.floor(Math.random() * 100);
+//             k = 0;
+//             for (j = 0; j <= i; j++) {
 
-                if (aux !== coord[j] && k === 0) {
-                    k = 10;
-                    j = 100000;
+//                 if (aux === coord[j]) {
+//                     k = 1;
+//                 }
 
-                }
+//                 if (aux !== coord[j] && k === 0) {
+//                     k = 10;
+//                     j = 100000;
 
-            }
+//                 }
 
-        }
+//             }
 
-        coord[i] = aux;
-        k = 0;
-    }
+//         }
 
-    //Se 0 então vertical se 1 então horiontal
-    for (i = 0; i < 10; i++) {
-        aux = Math.floor(Math.random() * 100);
-        orien[i] = aux % 2;
-    }
+//         coord[i] = aux;
+//         k = 0;
+//     }
 
-    return (coord, orien);
+//     //Se 0 então vertical se 1 então horiontal
+//     for (i = 0; i < 10; i++) {
+//         aux = Math.floor(Math.random() * 100);
+//         orien[i] = aux % 2;
+//     }
 
-}
-export default geraBarco;
+//     return [coord, orien];
+
+// }
+// export default geraBarco;
