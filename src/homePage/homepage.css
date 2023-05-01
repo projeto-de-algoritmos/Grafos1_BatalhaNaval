@@ -1,0 +1,86 @@
+.leaderboard {
+    /* background-color: blueviolet; */
+    text-align: center;
+}
+
+
+.boards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+
+}
+
+.line {
+    display: flex;
+
+}
+
+.singleBoard {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.playerHeader {}
+
+.arrowImage {
+
+    height: 2rem;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.hiddenArrowImage {
+
+    height: 2rem;
+
+    visibility: hidden;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.ship--1,
+.ship-0,
+.ship-1,
+.ship-2 {
+
+    height: 3.2rem;
+    width: 3.2rem;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightslategray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.ship-0,
+.ship-1 {
+    background-color: aqua;
+}
+
+.ship-2 {
+    background: rgba(255, 0, 0, 0.745);
+}
+
+.ship--1 {
+    background-color: rgba(0, 0, 255, 0.755);
+}
+
+.btnImage {
+    height: 2rem;
+}
