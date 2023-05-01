@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 85fb291d (Add gitignore)
-
- 
+85fb291d (Add gitignore)
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -16,7 +11,9 @@
 /coverage
 package-lock.json
 # production
-/build
+
+# /build
+
 
 # misc
 .DS_Store
@@ -27,10 +24,10 @@ package-lock.json
 
 npm-debug.log*
 yarn-debug.log*
+
 yarn-error.log*
-<<<<<<< HEAD
-=======
+
 /node_modules
->>>>>>> c6ec04bd (Updates das funcoes)
-=======
->>>>>>> 85fb291d (Add gitignore)
+
+yarn-error.log*
+
