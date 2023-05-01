@@ -81,13 +81,13 @@ function App() {
             //Navio na horizontal
             if (orien[i] === 1) {
 
-                campo[coordl + j][coordc] = i+1;
+                campo[coordl + j][coordc] = 1;
 
             }
 
             else if (orien[i] === 0) {
 
-                campo[coordl][coordc + j] = i+1;
+                campo[coordl][coordc + j] = 1;
 
             }
 
