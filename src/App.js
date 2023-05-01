@@ -77,6 +77,7 @@ function App() {
     // }
 
 
+    // posicionaBarco();
 
 //     return campo.map(linha => {
 //         return (
