@@ -45,7 +45,7 @@ function criaTabuleiro() {
             //Distância importa
             if (k === 10) {
                 //Verifica se tem borda
-                if (((aux + 2) % 10 !== 0) && ((aux + 1) % 10 !== 0) && ((aux - 1) % 10 !== 0) && ((aux - 2) % 10 !== 0) && aux + 20 <= 99 && aux - 20 >= 0) {
+                if (((aux + 2) % 10 !== 0) && ((aux + 1) % 10 !== 0) && ((aux - 1) % 10 !== 0) && ((aux - 2) % 10 !== 0) && aux + 20 <= 99) {
                     k = 10;
                 }
 
