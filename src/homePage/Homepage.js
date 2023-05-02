@@ -50,25 +50,41 @@ export default function Homepage() {
 
 
     function chama() {
-        var { y, x } = chute()
-        verify(y, x, "player")
-        setTurn("player");
+        chute()
     }
 
-    var chutados = [];
+    const [chutados,setChutados] = useState([]);
 
     function chute() {
+
 
         var y = Math.floor(Math.random() * 10);
         var x = Math.floor(Math.random() * 10);
 
-        if (chutados.indexOf({ y, x }) == -1) {
-            chutados.push({ y, x });
-            return { x, y };
+        if (x === 10 || y === 10) {
+            chama();
+            return;
         }
-        console.log({ y, x })
 
-        return chute();
+        if (chutados.indexOf(y + '' + x) !== -1) {
+            console.log({ ah: "não", y, x })
+
+            chama();
+            return;
+        }
+
+
+
+        console.log(chutados.indexOf(y + '' + x))
+        // chutados.splice(1, 0, y + '' + x);
+        setChutados([...chutados, y + '' + x])
+
+        console.log({ chutados })
+        verify(y, x, "player")
+
+        setTurn("player");
+
+        return { x, y };
 
 
 
@@ -176,7 +192,13 @@ export default function Homepage() {
     }
 
 
+    if (enemyScore >= 15) {
+        return <h1 className='endTitle'> Voce Ganhou!</h1>
+    }
 
+    if (playerScore >= 15) {
+        return <h1 className='endTitle'> Voce Perdeu!</h1>
+    }
 
     return (
         <>
