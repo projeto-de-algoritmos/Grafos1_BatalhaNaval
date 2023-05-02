@@ -1,3 +1,44 @@
+**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+
+Temas:
+ - Grafos1
+ - Grafos2
+ - PD
+ - D&C
+ - Greed
+ - Final 
+ 
+ **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
+ 
+ (Apague essa seção)
+
+# Batalha Naval
+
+**Número da Lista**: X<br>
+**Conteúdo da Disciplina**: Grafos 1<br>
+
+## Alunos
+|Matrícula | Aluno |
+| -- | -- |
+| 190105071  |  Davi Gonçalves Akegawa Pierre   |
+| 180042238  |  João Gabrial de Campos de Matos |
+
+## Sobre 
+Os objetivos são de criar um jogo que aplique a lógica de grafos em um ambiente familiar 
+
+## Screenshots
+Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+## Uso 
+Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+
+## Instalação 
+**Linguagem**: Java Script<br>
+**Framework**: React<br>
+
+Para rodar o aplicativo, após abrir o repositório, basta seguir os passos a baoixo na branch main
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
