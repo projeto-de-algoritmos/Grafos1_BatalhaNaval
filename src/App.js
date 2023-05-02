@@ -4,6 +4,10 @@ import criaTabuleiro from './CriaTabuleiro';
 
 function App() {
 
+return<></>
+
+
+
 
     
     // var campo = cerebroAI();
