@@ -26,25 +26,64 @@ export default function Homepage() {
 
     const [turn, setTurn] = useState("player");
 
-    const [trigger, setTrigger] = useState(false);
+    const [trigger, setTrigger] = useState(0);
 
     useEffect(() => {
-        setPlayerState(newPlayerState);
-        setEnemyState(newEnemyState);
+        // console.log({ chute: chute() })
+        if (turn === "enemy") {
+            var myTimeout = setTimeout(chama, 900);
+            // myTimeout = setTimeout(() => false, 5000000);
+
+        }
+        if (playerState !== newPlayerState)
+            setPlayerState(newPlayerState);
+        if (enemyState !== newEnemyState)
+            setEnemyState(newEnemyState);
 
         // console.log(criaTabuleiro())
         return () => {
 
+            // clearTimeout(myTimeout);
+
         }
     }, [trigger])
+
+
+    function chama() {
+        var { y, x } = chute()
+        verify(y, x, "player")
+        setTurn("player");
+    }
+
+    var chutados = [];
+
+    function chute() {
+
+        var y = Math.floor(Math.random() * 10);
+        var x = Math.floor(Math.random() * 10);
+
+        if (chutados.indexOf({ y, x }) == -1) {
+            chutados.push({ y, x });
+            return { x, y };
+        }
+        console.log({ y, x })
+
+        return chute();
+
+
+
+    }
+
+
+
 
 
     function verify(y_index, x_index, owner) {
         var auxBoard;
 
         if (owner === "player") {
-            setTurn("player")
-            auxBoard = playerState;
+            // setTurn("player")
+            auxBoard = newPlayerState;
 
             switch (auxBoard[y_index][x_index]) {
 
@@ -64,7 +103,7 @@ export default function Homepage() {
         } else {
             setTurn("enemy")
 
-            auxBoard = enemyState;
+            auxBoard = newEnemyState;
 
             switch (auxBoard[y_index][x_index]) {
 
@@ -84,7 +123,7 @@ export default function Homepage() {
 
         }
 
-        setTrigger(!trigger)
+        setTrigger(trigger + 2)
 
     }
 
@@ -145,7 +184,7 @@ export default function Homepage() {
                 <h2 > Pontuação </h2>
 
                 <h1 className='score'>
-                    {playerScore} - {enemyScore}
+                    {enemyScore} - {playerScore}
                 </h1>
             </div>
 
