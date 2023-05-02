@@ -28,6 +28,10 @@ Os objetivos são de criar um jogo que aplique a lógica de grafos em um ambient
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
+![image](https://user-images.githubusercontent.com/54087048/235568245-bc21aae4-8383-4984-a742-bbfbad9210c2.png)
+![image](https://user-images.githubusercontent.com/54087048/235568264-01d9d965-fa1e-4ebf-a0cd-c2b47655d030.png)
+![image](https://user-images.githubusercontent.com/54087048/235568278-be4755c4-fa73-45ad-8ce5-2735487ae94c.png)
+
 
 ## Uso 
 Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
